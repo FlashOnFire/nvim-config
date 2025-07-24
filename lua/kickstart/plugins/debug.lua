@@ -36,7 +36,7 @@ return {
     {
       '<leader>B',
       function()
-        local dap = require 'dap'
+        local dap = require('dap')
 
         -- Search for an existing breakpoint on this line in this buffer
         ---@return dap.SourceBreakpoint bp that was either found, or an empty placeholder
@@ -44,12 +44,12 @@ return {
           local buf_bps = require('dap.breakpoints').get(vim.fn.bufnr())[vim.fn.bufnr()]
           ---@type dap.SourceBreakpoint
           for _, candidate in ipairs(buf_bps) do
-            if candidate.line and candidate.line == vim.fn.line '.' then
+            if candidate.line and candidate.line == vim.fn.line('.') then
               return candidate
             end
           end
 
-          return { condition = '', logMessage = '', hitCondition = '', line = vim.fn.line '.' }
+          return { condition = '', logMessage = '', hitCondition = '', line = vim.fn.line('.') }
         end
 
         -- Elicit customization via a UI prompt
@@ -81,10 +81,10 @@ return {
               -- User cancelled the selection
               return
             end
-            props[choice].setter(vim.fn.input {
+            props[choice].setter(vim.fn.input({
               prompt = ('[%s] '):format(choice),
               default = props[choice].value,
-            })
+            }))
 
             -- Set breakpoint for current line, with customizations (see h:dap.set_breakpoint())
             dap.set_breakpoint(bp.condition, bp.hitCondition, bp.logMessage)
@@ -99,10 +99,10 @@ return {
     { '<F7>', function() require('dapui').toggle() end, desc = 'Debug: See last session result.' },
   },
   config = function()
-    local dap = require 'dap'
-    local dapui = require 'dapui'
+    local dap = require('dap')
+    local dapui = require('dapui')
 
-    require('mason-nvim-dap').setup {
+    require('mason-nvim-dap').setup({
       -- Makes a best effort to setup the various debuggers with
       -- reasonable debug configurations
       automatic_installation = true,
@@ -117,12 +117,12 @@ return {
         -- Update this to ensure that you have the debuggers for the langs you want
         'delve',
       },
-    }
+    })
 
     -- Dap UI setup
     -- For more information, see |:help nvim-dap-ui|
     ---@diagnostic disable-next-line: missing-fields
-    dapui.setup {
+    dapui.setup({
       -- Set icons to characters that are more likely to work in every terminal.
       --    Feel free to remove or use ones that you like more! :)
       --    Don't feel like these are good choices.
@@ -141,7 +141,7 @@ return {
           disconnect = '⏏',
         },
       },
-    }
+    })
 
     -- Change breakpoint icons
     -- vim.api.nvim_set_hl(0, 'DapBreak', { fg = '#e51400' })
@@ -160,12 +160,12 @@ return {
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
 
     -- Install golang specific config
-    require('dap-go').setup {
+    require('dap-go').setup({
       delve = {
         -- On Windows delve must be run attached or it crashes.
         -- See https://github.com/leoluz/nvim-dap-go/blob/main/README.md#configuring
-        detached = vim.fn.has 'win32' == 0,
+        detached = vim.fn.has('win32') == 0,
       },
-    }
+    })
   end,
 }
