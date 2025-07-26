@@ -82,6 +82,15 @@ return {
         },
       },
 
+      -- When inside of git bash or WSL on windows, you may experience a hang with shell commands.
+      -- The following disables cmdline completions only when running shell commands (i.e. [':!' , ':%!']),
+      -- but still allows completion in other command modes (i.e. [':' , ':help', '/' , '?', ...]).
+      cmdline = {
+        sources = {
+          enabled = function() return vim.fn.getcmdtype() ~= ':' or not vim.fn.getcmdline():match("^[%%0-9,'<>%-]*!") end,
+        },
+      },
+
       snippets = { preset = 'luasnip' },
 
       -- Blink.cmp includes an optional, recommended rust fuzzy matcher,
@@ -91,7 +100,8 @@ return {
       -- the rust implementation via `'prefer_rust_with_warning'`
       --
       -- See :h blink-cmp-config-fuzzy for more information
-      fuzzy = { implementation = 'lua' },
+      fuzzy = { implementation = 'prefer_rust_with_warning' },
+      -- fuzzy = { implementation = 'lua' },
 
       -- Shows a signature help window while you type arguments for a function
       signature = { enabled = true },
