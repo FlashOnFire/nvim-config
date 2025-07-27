@@ -1,7 +1,4 @@
 -- [[ Setting options ]]
--- See `:help vim.o`
--- NOTE: You can change these options as you wish!
---  For more options, you can see `:help option-list`
 
 -- Line number / relative line numbers
 vim.o.number = true
@@ -18,8 +15,8 @@ vim.o.showmode = false
 --  See `:help 'clipboard'`
 vim.schedule(function() vim.o.clipboard = 'unnamedplus' end)
 
--- Indent every line that results from line wrapping to form a block
--- rather than indenting only the first line
+-- Indent every line that results from line wrapping
+-- to form a block rather than indenting only the first line
 vim.o.breakindent = true
 
 -- Save undo history
@@ -33,7 +30,7 @@ vim.o.smartcase = true
 vim.o.signcolumn = 'yes'
 
 -- Decrease update time
-vim.o.updatetime = 250
+vim.o.updatetime = 200
 
 -- Decrease mapped sequence wait time
 vim.o.timeoutlen = 300
