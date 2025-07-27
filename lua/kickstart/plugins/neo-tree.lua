@@ -19,6 +19,7 @@ return {
   ---@type neotree.Config
   opts = {
     filesystem = {
+      hijack_netrw_behavior = 'disabled', -- i use oil.nvim as a default fullscreen file manager
       window = {
         mappings = {
           ['\\'] = 'close_window',
