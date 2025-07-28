@@ -190,7 +190,18 @@ return {
           clangd = {},
           -- gopls = {},
           -- pyright = {},
-          rust_analyzer = {},
+          rust_analyzer = {
+            settings = {
+              ['rust-analyzer'] = {
+                check = {
+                  command = 'clippy',
+                },
+              },
+            },
+          },
+          cmake = {},
+          csharp_ls = {},
+          ruff = {},
           -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
           --
           -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -237,6 +248,14 @@ return {
       local ensure_installed = vim.tbl_keys(servers.mason or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Lua formatter
+        -- 'rustfmt', -- Rust formatter -- Deprecated, should be installed via rustup
+        'clang-format', -- Cpp formatter
+        'tombi', -- TOML formatter
+        'nixfmt', -- Nix formatter
+
+        'sonarlint-language-server', -- 2nd Cpp linter
+
+        'shellcheck', -- Sh linter and formatter
       })
       require('mason-tool-installer').setup({ ensure_installed = ensure_installed })
 
