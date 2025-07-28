@@ -254,6 +254,7 @@ return {
         'nixfmt', -- Nix formatter
 
         'sonarlint-language-server', -- 2nd Cpp linter
+        'markdownlint', -- Markdown linter
 
         'shellcheck', -- Sh linter and formatter
       })
