@@ -32,6 +32,9 @@ return {
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
+
+      local move = require('mini.move')
+      move.setup({})
     end,
   },
 }

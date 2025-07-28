@@ -33,13 +33,6 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('n', '<A-d>', ':copy .<CR>', { noremap = true, silent = true, desc = 'Duplicate line' })
 vim.keymap.set('v', '<A-d>', ":copy '><CR>gv", { noremap = true, silent = true, desc = 'Duplicate selected lines' })
 
--- Move lines without erasing yank register
-vim.keymap.set('n', '<A-k>', ':move -2<CR>==', { noremap = true, silent = true, desc = 'Move line up' })
-vim.keymap.set('n', '<A-j>', ':move +1<CR>==', { noremap = true, silent = true, desc = 'Move line down' })
-
-vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv", { desc = 'Move selected lines up' })
-vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv", { desc = 'Move selected lines down' })
-
 -- [[ Basic Autocommands ]]
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd('TextYankPost', {
