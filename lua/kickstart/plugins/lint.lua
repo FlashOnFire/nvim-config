@@ -9,7 +9,6 @@ return {
       local lint = require('lint')
       lint.linters_by_ft = {
         -- markdown = { 'markdownlint' },
-        cpp = { 'clang-tidy' },
         rust = { 'clippy' },
         sh = { 'shellcheck' },
         xml = { 'xmllint' },
