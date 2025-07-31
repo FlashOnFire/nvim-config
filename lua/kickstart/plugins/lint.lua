@@ -12,6 +12,7 @@ return {
         rust = { 'clippy' },
         sh = { 'shellcheck' },
         xml = { 'xmllint' },
+        cmake = { 'cmakelint' },
       }
 
       -- To allow other plugins to add linters to require('lint').linters_by_ft,

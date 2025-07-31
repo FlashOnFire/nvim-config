@@ -12,6 +12,7 @@ return {
         'bash',
         'c',
         'cpp',
+        'cmake',
         'c_sharp',
         'rust',
         'diff',

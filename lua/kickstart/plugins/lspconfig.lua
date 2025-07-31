@@ -199,7 +199,7 @@ return {
               },
             },
           },
-          cmake = {},
+          neocmake = {},
           csharp_ls = {},
           ruff = {},
           -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -250,6 +250,8 @@ return {
         'stylua', -- Lua formatter
         -- 'rustfmt', -- Rust formatter -- Deprecated, should be installed via rustup
         'clang-format', -- Cpp formatter
+        'cmakelang', -- CMake lsp
+        'cmakelint', -- CMake linter
         'tombi', -- TOML formatter
         'nixfmt', -- Nix formatter
 
