@@ -294,8 +294,6 @@ return {
         'tombi', -- TOML formatter
         'nixfmt', -- Nix formatter
 
-        'sonarlint-language-server', -- 2nd Cpp linter
-
         'shellcheck', -- Sh linter and formatter
       })
       require('mason-tool-installer').setup({ ensure_installed = ensure_installed })
