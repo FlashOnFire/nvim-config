@@ -60,4 +60,10 @@ vim.o.confirm = true
 vim.o.autoindent = true
 vim.o.smartindent = true
 
+if vim.g.neovide then
+  -- vim.o.guifont = "JetBrainsMono Nerd Font:h16"
+  -- vim.g.neovide_transparency = 0.8
+  vim.g.neovide_fullscreen = true
+end
+
 -- vim: ts=2 sts=2 sw=2 et
