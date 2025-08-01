@@ -146,12 +146,12 @@ return {
             [vim.diagnostic.severity.HINT] = '󰌶 ',
           },
         } or {},
-        virtual_text = {
-          source = 'if_many',
-          spacing = 2,
-        },
+        -- virtual_text = {
+        --   source = 'if_many',
+        --   spacing = 2,
+        -- },
         -- Display multiline diagnostics as virtual lines
-        -- virtual_lines = true,
+        virtual_lines = true,
       })
 
       -- LSP servers and clients are able to communicate to each other what features they support.
