@@ -13,17 +13,17 @@ return {
   },
   lazy = false,
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<leader>e', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   ---@module 'neo-tree'
   ---@type neotree.Config
   opts = {
     filesystem = {
       hijack_netrw_behavior = 'disabled', -- i use oil.nvim as a default fullscreen file manager
-      window = {
-        mappings = {
-          ['\\'] = 'close_window',
-        },
+    },
+    window = {
+      mappings = {
+        ['<leader>e'] = 'close_window',
       },
     },
   },
