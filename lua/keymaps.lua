@@ -23,15 +23,43 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
--- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
--- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
--- vim.keymap.set("n", "<C-S-j>", "<C-w>J", { desc = "Move window to the lower" })
--- vim.keymap.set("n", "<C-S-k>", "<C-w>K", { desc = "Move window to the upper" })
+-- Move windows
+vim.keymap.set('n', '<C-S-h>', '<C-w>H', { desc = 'Move window to the left' })
+vim.keymap.set('n', '<C-S-l>', '<C-w>L', { desc = 'Move window to the right' })
+vim.keymap.set('n', '<C-S-j>', '<C-w>J', { desc = 'Move window to the lower' })
+vim.keymap.set('n', '<C-S-k>', '<C-w>K', { desc = 'Move window to the upper' })
+
+-- Window splits (disabled for now, conflicts with Leap.nvim)
+-- vim.keymap.set('n', 'sh', ':split<Return>')
+-- vim.keymap.set('n', 'sv', ':vsplit<Return>')
+
+-- Window resize
+vim.keymap.set('n', '<M-left>', '<C-w>4<')
+vim.keymap.set('n', '<M-right>', '<C-w>4>')
+vim.keymap.set('n', '<M-up>', '<C-w>4+')
+vim.keymap.set('n', '<M-down>', '<C-w>4-')
 
 -- Duplicate lines
 vim.keymap.set('n', '<A-d>', ':copy .<CR>', { noremap = true, silent = true, desc = 'Duplicate line' })
 vim.keymap.set('v', '<A-d>', ":copy '><CR>gv", { noremap = true, silent = true, desc = 'Duplicate selected lines' })
+
+-- Black Hole register binds
+vim.keymap.set('n', 'x', '"_x')
+vim.keymap.set('n', '<M-p>', '"0p')
+vim.keymap.set('n', '<M-P>', '"0P')
+vim.keymap.set('v', '<M-p>', '"0p')
+vim.keymap.set('n', '<M-c>', '"_c')
+vim.keymap.set('n', '<M-C>', '"_C')
+vim.keymap.set('v', '<M-c>', '"_c')
+vim.keymap.set('v', '<M-C>', '"_C')
+vim.keymap.set('n', '<M-d>', '"_d')
+vim.keymap.set('n', '<M-D>', '"_D')
+vim.keymap.set('v', '<M-d>', '"_d')
+vim.keymap.set('v', '<M-D>', '"_D')
+
+-- Easy buffer delete
+vim.keymap.set('n', '<leader>q', ':bd<CR>')
+vim.keymap.set('n', '<leader>Q', ':bd!<CR>')
 
 -- [[ Basic Autocommands ]]
 -- Highlight when yanking (copying) text

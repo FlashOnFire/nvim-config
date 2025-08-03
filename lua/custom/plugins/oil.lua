@@ -11,6 +11,7 @@ function _G.get_oil_winbar()
 end
 
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
+vim.keymap.set('n', '<leader>o', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 return {
   'stevearc/oil.nvim',
