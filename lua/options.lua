@@ -60,6 +60,9 @@ vim.o.confirm = true
 vim.o.autoindent = true
 vim.o.smartindent = true
 
+-- Disable intro
+vim.opt.shortmess:append('I')
+
 -- Neovide tweaks
 if vim.g.neovide then
   -- vim.o.guifont = 'JetBrainsMono Nerd Font:h16'
