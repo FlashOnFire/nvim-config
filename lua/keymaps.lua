@@ -4,8 +4,8 @@
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 -- Diagnostic keymaps
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
-vim.keymap.set('n', '<leader>Q', ':lclose<CR>', { desc = 'Close diagnostic Quickfix list' })
+-- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+-- vim.keymap.set('n', '<leader>Q', '<CMD>lclose<CR>', { desc = 'Close diagnostic Quickfix list' })
 
 -- Exit terminal mode with an easier shortcut
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
@@ -30,8 +30,8 @@ vim.keymap.set('n', '<C-S-j>', '<C-w>J', { desc = 'Move window to the lower' })
 vim.keymap.set('n', '<C-S-k>', '<C-w>K', { desc = 'Move window to the upper' })
 
 -- Window splits (disabled for now, conflicts with Leap.nvim)
--- vim.keymap.set('n', 'sh', ':split<Return>')
--- vim.keymap.set('n', 'sv', ':vsplit<Return>')
+-- vim.keymap.set('n', 'sh', '<CMD>split<CR>')
+-- vim.keymap.set('n', 'sv', '<CMD>vsplit<CR>')
 
 -- Window resize
 vim.keymap.set('n', '<M-left>', '<C-w>4<')
@@ -40,8 +40,8 @@ vim.keymap.set('n', '<M-up>', '<C-w>4+')
 vim.keymap.set('n', '<M-down>', '<C-w>4-')
 
 -- Duplicate lines
-vim.keymap.set('n', '<A-d>', ':copy .<CR>', { noremap = true, silent = true, desc = 'Duplicate line' })
-vim.keymap.set('v', '<A-d>', ":copy '><CR>gv", { noremap = true, silent = true, desc = 'Duplicate selected lines' })
+vim.keymap.set('n', '<C-M-d>', '<CMD>copy .<CR>', { noremap = true, silent = true, desc = 'Duplicate line' })
+vim.keymap.set('v', '<C-M-d>', "<CMD>copy '><CR>gv", { noremap = true, silent = true, desc = 'Duplicate selected lines' })
 
 -- Black Hole register binds
 vim.keymap.set('n', 'x', '"_x')
@@ -58,8 +58,8 @@ vim.keymap.set('v', '<M-d>', '"_d')
 vim.keymap.set('v', '<M-D>', '"_D')
 
 -- Easy buffer delete
-vim.keymap.set('n', '<leader>q', ':bd<CR>')
-vim.keymap.set('n', '<leader>Q', ':bd!<CR>')
+vim.keymap.set('n', '<leader>q', '<CMD>bd<CR>')
+vim.keymap.set('n', '<leader>Q', '<CMD>bd!<CR>')
 
 -- Neovide tweaks
 if vim.g.neovide then
