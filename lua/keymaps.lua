@@ -61,6 +61,11 @@ vim.keymap.set('v', '<M-D>', '"_D')
 vim.keymap.set('n', '<leader>q', ':bd<CR>')
 vim.keymap.set('n', '<leader>Q', ':bd!<CR>')
 
+-- Neovide tweaks
+if vim.g.neovide then
+  vim.keymap.set({ 'n', 'v', 'i' }, '<F11>', function() vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen end)
+end
+
 -- [[ Basic Autocommands ]]
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd('TextYankPost', {
