@@ -11,7 +11,6 @@ return {
         -- markdown = { 'markdownlint' },
         rust = { 'clippy' },
         sh = { 'shellcheck' },
-        xml = { 'xmllint' },
         cmake = { 'cmakelint' },
       }
 
