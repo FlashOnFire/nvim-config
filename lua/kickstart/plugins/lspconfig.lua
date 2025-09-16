@@ -291,8 +291,7 @@ return {
         'stylua', -- Lua formatter
         -- 'rustfmt', -- Rust formatter -- Deprecated, should be installed via rustup
         'clang-format', -- Cpp formatter
-        'cmakelang', -- CMake lsp
-        'cmakelint', -- CMake linter
+        'neocmake', -- CMake lsp and formatter
         'tombi', -- TOML formatter
         'nixfmt', -- Nix formatter
 
