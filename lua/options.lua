@@ -60,6 +60,11 @@ vim.o.confirm = true
 vim.o.autoindent = true
 vim.o.smartindent = true
 
+-- Tabs / Spaces
+vim.o.expandtab = true
+-- vim.o.tabstop = 4
+-- vim.o.shiftwidth = 4
+
 -- Disable intro
 vim.opt.shortmess:append('I')
 
