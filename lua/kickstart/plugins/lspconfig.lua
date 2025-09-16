@@ -294,6 +294,7 @@ return {
         'neocmake', -- CMake lsp and formatter
         'tombi', -- TOML formatter
         'nixfmt', -- Nix formatter
+        'systemd_ls', -- SystemD lsp
 
         'shellcheck', -- Sh linter and formatter
       })
