@@ -333,7 +333,7 @@ return {
         -- 'rustfmt', -- Rust formatter -- Deprecated, should be installed via rustup
         'clang-format', -- Cpp formatter
         'neocmake', -- CMake lsp and formatter
-        'cmakelang', -- CMake formatter
+        'gersemi', -- CMake formatter
         'cmakelint', -- CMake linter
         'tombi', -- TOML formatter
         'nixfmt', -- Nix formatter

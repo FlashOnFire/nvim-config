@@ -35,7 +35,7 @@ return {
         toml = { 'tombi' },
         sh = { 'shellcheck' },
         xml = { 'xmllint' },
-        cmake = { 'cmake_format' },
+        cmake = { 'gersemi' },
 
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
