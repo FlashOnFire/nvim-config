@@ -19,6 +19,9 @@ return {
     scroll = { enabled = false },
     statuscolumn = { enabled = false },
     words = { enabled = false },
+    lazygit = {
+      configure = false,
+    },
   },
   init = function()
     vim.api.nvim_create_autocmd('User', {
@@ -51,7 +54,7 @@ return {
     })
   end,
   keys = {
-
     { '<c-Enter>', function() Snacks.terminal() end, desc = 'Toggle Terminal' },
+    { '<leader>gg', function() Snacks.lazygit() end, desc = 'LazyGit' },
   },
 }
