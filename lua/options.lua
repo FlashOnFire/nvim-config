@@ -4,6 +4,12 @@
 vim.o.number = true
 vim.o.relativenumber = true
 
+-- Line wrapping
+vim.o.wrap = false
+
+-- Highlight 180 chars limit
+-- vim.o.colorcolumn = '180'
+
 -- Allow usage of mouse in all modes
 vim.o.mouse = 'a'
 
