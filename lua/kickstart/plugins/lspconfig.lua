@@ -295,6 +295,7 @@ return {
               },
             },
           },
+          biome = {},
 
           rust_hdl = {}, -- VHDL
         },
@@ -316,6 +317,8 @@ return {
         'tombi', -- TOML formatter
         'nixfmt', -- Nix formatter
         'systemd_ls', -- SystemD lsp
+        'biome', -- JSON, TypeScript, and Javascript formatter and linter
+        'jsonlint', -- JSON linter
 
         'shellcheck', -- Sh linter and formatter
       })

@@ -18,7 +18,7 @@ return {
       format_on_save = function(bufnr)
         -- Disable "format_on_save lsp_fallback" for languages that don't
         -- have a well standardized coding style.
-        local disable_filetypes = { c = true, cpp = true, cmake = true }
+        local disable_filetypes = { c = true, cpp = true, cmake = true, json = true }
         if disable_filetypes[vim.bo[bufnr].filetype] then
           return nil
         else
@@ -36,6 +36,7 @@ return {
         sh = { 'shellcheck' },
         xml = { 'xmllint' },
         cmake = { 'gersemi' },
+        json = { 'biome' },
 
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
