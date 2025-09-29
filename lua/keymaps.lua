@@ -64,10 +64,9 @@ vim.keymap.set('n', '<leader>Q', '<CMD>bd!<CR>')
 -- Neovide tweaks
 if vim.g.neovide then
   vim.keymap.set({ 'n', 'v', 'i' }, '<F11>', function() vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen end)
+  vim.keymap.set({ 'n', 'v', 'i' }, '<C-ScrollWheelUp>', function() vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1 end)
+  vim.keymap.set({ 'n', 'v', 'i' }, '<C-ScrollWheelDown>', function() vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1 end)
 end
-
-vim.keymap.set({ 'n', 'v', 'i' }, '<C-ScrollWheelUp>', function() vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1 end)
-vim.keymap.set({ 'n', 'v', 'i' }, '<C-ScrollWheelDown>', function() vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.1 end)
 
 -- [[ Basic Autocommands ]]
 -- Highlight when yanking (copying) text
