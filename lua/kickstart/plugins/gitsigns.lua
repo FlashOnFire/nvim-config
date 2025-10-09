@@ -56,6 +56,7 @@ return {
           if vim.wo.diff then
             vim.cmd.normal({ ']c', bang = true })
           else
+            ---@diagnostic disable-next-line: param-type-mismatch
             gitsigns.nav_hunk('next')
           end
         end, { desc = 'Jump to next git [c]hange' })
@@ -64,6 +65,7 @@ return {
           if vim.wo.diff then
             vim.cmd.normal({ '[c', bang = true })
           else
+            ---@diagnostic disable-next-line: param-type-mismatch
             gitsigns.nav_hunk('prev')
           end
         end, { desc = 'Jump to previous git [c]hange' })
