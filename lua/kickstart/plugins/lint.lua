@@ -9,7 +9,6 @@ return {
       local lint = require('lint')
       lint.linters_by_ft = {
         -- markdown = { 'markdownlint' },
-        rust = { 'clippy' },
         sh = { 'shellcheck' },
         cmake = { 'cmakelint' },
         json = { 'jsonlint' },
