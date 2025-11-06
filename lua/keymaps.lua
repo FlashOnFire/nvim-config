@@ -61,6 +61,10 @@ vim.keymap.set('v', '<M-D>', '"_D')
 vim.keymap.set('n', '<leader>q', '<CMD>bd<CR>')
 vim.keymap.set('n', '<leader>Q', '<CMD>bd!<CR>')
 
+-- File manipulation
+vim.keymap.set('n', '<C-C>', ':%y+<CR>', { noremap = true, desc = 'Copy all lines' })
+vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, desc = 'Select all lines' })
+
 -- Neovide tweaks
 if vim.g.neovide then
   vim.keymap.set({ 'n', 'v', 'i' }, '<F11>', function() vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen end)
