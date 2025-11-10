@@ -63,7 +63,7 @@ vim.keymap.set('n', '<leader>Q', '<CMD>bd!<CR>')
 
 -- File manipulation
 vim.keymap.set('n', '<C-C>', ':%y+<CR>', { noremap = true, desc = 'Copy all lines' })
-vim.keymap.set('n', '<C-a>', 'ggVG', { noremap = true, desc = 'Select all lines' })
+vim.keymap.set('n', '<C-S-A>', 'ggVG', { noremap = true, desc = 'Select all lines' })
 
 -- Neovide tweaks
 if vim.g.neovide then
