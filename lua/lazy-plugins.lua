@@ -1,36 +1,48 @@
 -- [[ Configure and install plugins ]]
 
 require('lazy').setup({
-  require('kickstart.plugins.guess-indents'),
+  require('plugins.guess-indents'),
 
-  require('kickstart.plugins.gitsigns'),
+  require('plugins.gitsigns'),
 
-  require('kickstart.plugins.which-key'),
+  require('plugins.which-key'),
 
-  require('kickstart.plugins.telescope'),
+  require('plugins.telescope'),
 
-  require('kickstart.plugins.lspconfig'),
+  require('plugins.lspconfig'),
 
-  require('kickstart.plugins.conform'),
+  require('plugins.conform'),
 
-  require('kickstart.plugins.blink-cmp'),
+  require('plugins.blink-cmp'),
 
   -- require('kickstart.plugins.tokyonight'),
 
-  require('kickstart.plugins.todo-comments'),
+  require('plugins.todo-comments'),
 
-  require('kickstart.plugins.mini'),
+  require('plugins.mini'),
 
-  require('kickstart.plugins.treesitter'),
+  require('plugins.treesitter'),
 
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
-  require('kickstart.plugins.lint'),
-  require('kickstart.plugins.autopairs'),
-  require('kickstart.plugins.neo-tree'),
+  require('plugins.lint'),
+  require('plugins.autopairs'),
+  require('plugins.neo-tree'),
 
-  { import = 'custom.plugins' },
-  --
+  ----
+  require('plugins.cmake-tools'),
+  require('plugins.colorful-menu'),
+  require('plugins.crates'),
+  require('plugins.leap'),
+  require('plugins.monokai-pro'),
+  require('plugins.oil'),
+  require('plugins.render-markdown'),
+  require('plugins.snacks'),
+  require('plugins.suda'),
+  require('plugins.trouble'),
+
+  -- { import = 'custom.plugins' },
+
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
