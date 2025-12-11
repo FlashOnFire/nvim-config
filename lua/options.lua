@@ -5,7 +5,8 @@ vim.o.number = true
 vim.o.relativenumber = true
 
 -- Line wrapping
-vim.o.wrap = false
+vim.o.wrap = true
+vim.o.linebreak = true
 
 -- Highlight 180 chars limit
 -- vim.o.colorcolumn = '180'
