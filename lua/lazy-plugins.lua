@@ -40,6 +40,7 @@ require('lazy').setup({
   require('plugins.snacks'),
   require('plugins.suda'),
   require('plugins.trouble'),
+  require('plugins.nvim-colorizer'),
 
   -- { import = 'custom.plugins' },
 
