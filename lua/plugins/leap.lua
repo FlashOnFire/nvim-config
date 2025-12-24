@@ -2,7 +2,7 @@
 ---@type LazySpec
 return {
   {
-    'ggandor/leap.nvim',
+    'https://codeberg.org/andyg/leap.nvim',
     enabled = true,
     keys = {
       { 's', mode = { 'n', 'x', 'o' }, desc = 'Leap Forward to' },
