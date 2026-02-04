@@ -15,7 +15,7 @@ require('lazy').setup({
 
   require('plugins.blink-cmp'),
 
-  -- require('kickstart.plugins.tokyonight'),
+  -- require('plugins.tokyonight'),
 
   require('plugins.todo-comments'),
 
@@ -23,8 +23,8 @@ require('lazy').setup({
 
   require('plugins.treesitter'),
 
-  -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
+  -- require 'plugins.debug',
+  -- require 'plugins.indent_line',
   require('plugins.lint'),
   require('plugins.autopairs'),
   require('plugins.neo-tree'),
@@ -42,8 +42,6 @@ require('lazy').setup({
   require('plugins.trouble'),
   require('plugins.nvim-colorizer'),
   require('plugins.git-conflict'),
-
-  -- { import = 'custom.plugins' },
 
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
