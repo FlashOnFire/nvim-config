@@ -41,6 +41,7 @@ require('lazy').setup({
   require('plugins.suda'),
   require('plugins.trouble'),
   require('plugins.nvim-colorizer'),
+  require('plugins.git-conflict'),
 
   -- { import = 'custom.plugins' },
 
