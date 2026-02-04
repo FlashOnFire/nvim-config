@@ -321,7 +321,7 @@ return {
         'cmakelint', -- CMake linter
         'tombi', -- TOML formatter
         'nixfmt', -- Nix formatter
-        'systemd_ls', -- SystemD lsp
+        'systemd-lsp', -- SystemD lsp
         'biome', -- JSON, TypeScript, and Javascript formatter and linter
         'jsonlint', -- JSON linter
 
