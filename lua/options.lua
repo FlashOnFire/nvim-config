@@ -75,15 +75,4 @@ vim.o.expandtab = true
 -- Disable intro
 vim.opt.shortmess:append('I')
 
--- Neovide tweaks
-if vim.g.neovide then
-  if vim.fn.has('linux') then
-    vim.o.guifont = 'Iosevka Nerd Font Mono,Noto Color Emoji'
-  else
-    vim.o.guifont = 'Iosevka Nerd Font Mono'
-  end
-  -- vim.g.neovide_transparency = 0.8
-  -- vim.g.neovide_fullscreen = true
-end
-
 -- vim: ts=2 sts=2 sw=2 et
