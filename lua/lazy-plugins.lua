@@ -36,7 +36,7 @@ require('lazy').setup({
   require('plugins.leap'),
   require('plugins.monokai-pro'),
   require('plugins.oil'),
-  require('plugins.oil-git'),
+  require('plugins.git-oil'),
   require('plugins.render-markdown'),
   require('plugins.snacks'),
   require('plugins.suda'),
