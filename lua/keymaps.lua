@@ -68,6 +68,9 @@ vim.keymap.set('n', '<C-S-A>', 'ggVG', { noremap = true, desc = 'Select all line
 -- File Navigation
 vim.keymap.set('n', '<Tab>', ':e #<CR>', { noremap = true, desc = 'Switch to last edited file' })
 
+-- Misc
+vim.keymap.set({ 'n', 'v' }, '<C-N>', ':norm ', { noremap = true, desc = ':norm ' })
+
 -- Neovide keymaps
 if vim.g.neovide then
   vim.keymap.set({ 'n', 'v', 'i' }, '<F11>', function() vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen end)
