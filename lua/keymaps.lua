@@ -68,7 +68,7 @@ map('n', '<C-C>', ':%y+<CR>', { noremap = true, desc = 'Copy all lines' })
 map('n', '<C-S-A>', 'ggVG', { noremap = true, desc = 'Select all lines' })
 
 -- File Navigation
-map('n', '<Tab>', ':e #<CR>', { noremap = true, desc = 'Switch to last edited file' })
+map('n', '<S-Tab>', ':e #<CR>', { noremap = true, desc = 'Switch to last buffer' })
 
 -- Misc
 map({ 'n', 'v' }, '<C-N>', ':norm ', { noremap = true, desc = ':norm ' })
