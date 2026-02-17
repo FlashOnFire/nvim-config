@@ -13,6 +13,8 @@ end
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 vim.keymap.set('n', '<leader>o', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
+---@module 'lazy'
+---@type LazySpec
 return {
   'stevearc/oil.nvim',
   ---@module 'oil'

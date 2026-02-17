@@ -66,9 +66,10 @@ map('n', '<leader>Q', '<CMD>bd!<CR>')
 -- File manipulation
 map('n', '<C-C>', ':%y+<CR>', { noremap = true, desc = 'Copy all lines' })
 map('n', '<C-S-A>', 'ggVG', { noremap = true, desc = 'Select all lines' })
+map('n', '<C-s>', ':update<CR>', { noremap = true, desc = 'Save' })
 
 -- File Navigation
-map('n', '<S-Tab>', ':e #<CR>', { noremap = true, desc = 'Switch to last buffer' })
+-- map('n', '<S-Tab>', ':e #<CR>', { noremap = true, desc = 'Switch to last buffer' })
 
 -- Misc
 map({ 'n', 'v' }, '<C-N>', ':norm ', { noremap = true, desc = ':norm ' })

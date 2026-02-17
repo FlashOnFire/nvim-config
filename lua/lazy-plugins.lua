@@ -43,6 +43,7 @@ require('lazy').setup({
   require('plugins.trouble'),
   require('plugins.nvim-colorizer'),
   require('plugins.git-conflict'),
+  require('plugins.copilot-chat'),
 
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!

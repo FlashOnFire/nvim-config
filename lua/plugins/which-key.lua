@@ -1,3 +1,5 @@
+---@module 'lazy'
+---@type LazySpec
 return {
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
@@ -51,6 +53,7 @@ return {
         { '<leader>s', group = '[S]earch', mode = { 'n', 'v' } },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>g', group = '[G]it', mode = { 'n', 'v' } },
+        { '<leader>c', group = '[C]opilot', mode = { 'n', 'v' } },
       },
     },
   },

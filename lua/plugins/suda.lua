@@ -1,3 +1,5 @@
+---@module 'lazy'
+---@type LazySpec
 return {
   'lambdalisue/vim-suda',
   lazy = false,
