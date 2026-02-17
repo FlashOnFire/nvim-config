@@ -303,6 +303,17 @@ return {
           biome = {},
 
           rust_hdl = {}, -- VHDL
+
+          harper_ls = {
+            settings = {
+              ['harper-ls'] = {
+                linters = {
+                  SentenceCapitalization = false,
+                  SpellCheck = false,
+                },
+              },
+            },
+          },
         },
         -- This table contains config for all language servers that are *not* installed via Mason.
         -- Structure is identical to the mason table from above.
@@ -326,6 +337,7 @@ return {
         'jsonlint', -- JSON linter
 
         'shellcheck', -- Sh linter and formatter
+        'harper_ls', -- General grammar checker
       })
       require('mason-tool-installer').setup({ ensure_installed = ensure_installed })
 
