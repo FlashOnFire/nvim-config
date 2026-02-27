@@ -4,6 +4,7 @@
 
 External Requirements:
 - Basic utils: `git`, `make`, `unzip`, `tar`, C Compiler (`gcc`)
+- [tree-sitter CLI](https://github.com/tree-sitter/tree-sitter/blob/master/crates/cli/README.md#installation)
 - [ripgrep](https://github.com/BurntSushi/ripgrep#installation),
   [fd-find](https://github.com/sharkdp/fd#installation)
 - Clipboard tool (wl-clipboard/xclip/xsel/win32yank or other depending on the platform)
