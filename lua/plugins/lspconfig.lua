@@ -321,6 +321,7 @@ return {
         -- Structure is identical to the mason table from above.
         others = {
           -- dartls = {},
+          nixd = vim.fn.executable('nixd') == 1 and {} or nil,
         },
       }
 
@@ -334,7 +335,6 @@ return {
         'cmakelint', -- CMake linter
         'tombi', -- TOML formatter
         'nixfmt', -- Nix formatter
-        'nil_ls', -- Nix LSP
         'systemd-lsp', -- SystemD lsp
         'biome', -- JSON, TypeScript, and Javascript formatter and linter
         'jsonlint', -- JSON linter
