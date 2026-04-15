@@ -76,4 +76,7 @@ vim.o.expandtab = true
 -- Disable intro
 vim.opt.shortmess:append('I')
 
+-- Required for `opts.events.reload` (used by opencode)
+vim.o.autoread = true
+
 -- vim: ts=2 sts=2 sw=2 et

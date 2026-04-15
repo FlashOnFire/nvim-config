@@ -46,6 +46,7 @@ require('lazy').setup({
   -- require('plugins.copilot-chat'),
   require('plugins.copilot'),
   require('plugins.codecompanion'),
+  require('plugins.opencode'),
 
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
