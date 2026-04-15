@@ -37,13 +37,15 @@ require('lazy').setup({
   require('plugins.monokai-pro'),
   require('plugins.oil'),
   require('plugins.git-oil'),
-  require('plugins.render-markdown'),
+  require('plugins.markview'),
   require('plugins.snacks'),
   require('plugins.suda'),
   require('plugins.trouble'),
   require('plugins.nvim-colorizer'),
   require('plugins.git-conflict'),
-  require('plugins.copilot-chat'),
+  -- require('plugins.copilot-chat'),
+  require('plugins.copilot'),
+  require('plugins.codecompanion'),
 
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
