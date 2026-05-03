@@ -321,7 +321,21 @@ return {
         -- Structure is identical to the mason table from above.
         others = {
           -- dartls = {},
-          nixd = vim.fn.executable('nixd') == 1 and {} or nil,
+          nixd = vim.fn.executable('nixd') == 1 and {
+            settings = {
+              nixd = {
+                nixpkgs = {
+                  -- nixd evaluates this in the workspace root, so the path check adapts per-project
+                  expr = 'if builtins.pathExists ./flake.nix then (builtins.getFlake (toString ./.)).inputs.nixpkgs.legacyPackages.${builtins.currentSystem} else import <nixpkgs> {}',
+                },
+                options = {
+                  nixos = {
+                    expr = 'let flake = builtins.getFlake (toString ./.); in if builtins.pathExists ./flake.nix && flake ? nixosConfigurations && flake.nixosConfigurations ? lithium then flake.nixosConfigurations.lithium.options else {}',
+                  },
+                },
+              },
+            },
+          } or nil,
         },
       }
 
